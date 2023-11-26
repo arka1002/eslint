@@ -1,1 +1,1 @@
-({ bar: { bad, zoo: { shazam } = "z" } = {} } = foo); 
+({ bar: { bad } = {} }) => {};

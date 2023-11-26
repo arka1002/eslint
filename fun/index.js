@@ -1,1 +1,1 @@
-const [{ bad }, { zoo }] = foo;
+({ bar: { bad, zoo: { shazam } = "z" } = {} } = foo); 

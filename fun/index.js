@@ -1,1 +1,1 @@
-let {bar} = foo;
+const [{ bad }, { zoo }] = foo;

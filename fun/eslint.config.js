@@ -2,8 +2,7 @@ export default [
     {
         rules: {
             "no-restricted-properties": ["error", {
-                "object": "foo",
-                "message": "Abra cadabra"
+                "property": "bad"
             }]
         }
     }

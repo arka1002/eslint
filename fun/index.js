@@ -1,0 +1,1 @@
+const { ignores, ...otherKeys } = config;

@@ -547,7 +547,18 @@ ruleTester.run("no-restricted-properties", rule, {
                 type: "MemberExpression"
             }]
         }, {
-            code: "({ bar: { bad } = {} }) => {};",
+            code: "const { bar: { bad } = {} } = foo;",
+            options: [{ property: "bad" }],
+            parserOptions: { ecmaVersion: 6 },
+            errors: [{
+                messageId: "restrictedProperty",
+                data: {
+                    propertyName: "bad",
+                    message: ""
+                }
+            }]
+        }, {
+            code: "const { bar: { bad } } = foo;",
             options: [{ property: "bad" }],
             parserOptions: { ecmaVersion: 6 },
             errors: [{

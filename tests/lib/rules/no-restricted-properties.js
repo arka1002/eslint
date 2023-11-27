@@ -612,6 +612,50 @@ ruleTester.run("no-restricted-properties", rule, {
                     message: ""
                 }
             }]
+        }, {
+            code: "({ bad }) => {};",
+            options: [{ property: "bad" }],
+            parserOptions: { ecmaVersion: 6 },
+            errors: [{
+                messageId: "restrictedProperty",
+                data: {
+                    propertyName: "bad",
+                    message: ""
+                }
+            }]
+        }, {
+            code: "({ bad } = {}) => {};",
+            options: [{ property: "bad" }],
+            parserOptions: { ecmaVersion: 6 },
+            errors: [{
+                messageId: "restrictedProperty",
+                data: {
+                    propertyName: "bad",
+                    message: ""
+                }
+            }]
+        }, {
+            code: "({ bad: bar }) => {};",
+            options: [{ property: "bad" }],
+            parserOptions: { ecmaVersion: 6 },
+            errors: [{
+                messageId: "restrictedProperty",
+                data: {
+                    propertyName: "bad",
+                    message: ""
+                }
+            }]
+        }, {
+            code: "({ bar: { bad } = {} }) => {};",
+            options: [{ property: "bad" }],
+            parserOptions: { ecmaVersion: 6 },
+            errors: [{
+                messageId: "restrictedProperty",
+                data: {
+                    propertyName: "bad",
+                    message: ""
+                }
+            }]
         }
     ]
 });

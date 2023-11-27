@@ -1,1 +1,1 @@
-const { bad } = foo();
+({ bad }) => {};

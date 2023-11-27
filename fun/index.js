@@ -1,1 +1,1 @@
-({ bar: { bad } = {} }) => {};
+const { bad } = foo();

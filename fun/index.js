@@ -1,1 +1,0 @@
-const { ignores, ...otherKeys } = config;

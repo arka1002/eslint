@@ -1,0 +1,1 @@
+({ bad, 'lol': { like } } = foo) => {};

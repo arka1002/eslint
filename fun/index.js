@@ -1,1 +1,1 @@
-({ bad, 'lol': { like }, zoo } = foo) => {};
+({ bar: { bad } = {} }) => {};
